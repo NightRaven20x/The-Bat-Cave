@@ -1,0 +1,29 @@
+/* =========================================
+   ABOUT.CSS - About Me Specific Styles
+   ========================================= */
+
+.skills-history {
+    background-color: #2e0000;
+    color: crimson;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid #4a0000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.skills-history ul,
+.skills-history ol {
+    background: none;
+    border: none;
+    padding-left: 20px;
+}
+
+.skills-history li {
+    color: #ffcccc;
+    margin-bottom: 8px;
+}
+
+.skills-history li strong {
+    color: #fff;
+}

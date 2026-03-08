@@ -1,0 +1,280 @@
+/* --- 00. SMOOTH SCROLLING (The Glide Effect) --- */
+html {
+    scroll-behavior: smooth;
+    /* This prevents the browser from scrolling the section title underneath the top of the screen */
+    scroll-padding-top: 40px;
+}
+
+body {
+  background-color: #020813; /* Deep dark space-blue */
+  color: #d9e2ec; /* Light silver text */
+}
+
+h1, h2, h3, h4 {
+  color: #c5a059; /* Forces all headings to be gold so they pop */
+}
+
+/* --- 1. THE GRID LAYOUT --- */
+main.batman-card {
+    background-color: transparent;
+    /* Removes the red global box */
+    border: none;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    main.batman-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- 1. HEADER & TITLE --- */
+header {
+    background-color: #020813;
+    text-align: center;
+    padding-top: 30px;
+    /* Gives the title some breathing room */
+}
+
+h1.blog-title {
+    color: #e6b85c;
+    /* Wayne Tech Gold */
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 15px rgba(230, 184, 92, 0.4);
+    /* Subtle gold glow */
+}
+
+/* --- 2. BLOG NAVIGATION (Terminal Buttons) --- */
+.blog-nav {
+    background: linear-gradient(90deg, #051a2e 0%, #0a2540 50%, #051a2e 100%);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Keeps it looking good on mobile */
+    gap: 20px;
+    /* Adds perfect spacing between buttons */
+    border-top: 2px solid #1f4063;
+    border-bottom: 3px solid #e6b85c;
+    /* Thick gold border at the bottom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.blog-nav a {
+    color: #7fdbff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 1px solid #1f4063;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* THE UPGRADE: Explicit, buttery-smooth transitions */
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Adds a premium, tactile "spring" */
+}
+
+/* The Hover Effect */
+.blog-nav a:hover {
+    background-color: #7fdbff;
+    color: #020813;
+    /* Swapped to dark space-blue for better contrast than pure black */
+    border-color: #7fdbff;
+    box-shadow: 0 0 18px rgba(127, 219, 255, 0.7);
+    /* Slightly softer glow */
+    transform: translateY(-4px);
+    /* Moves up slightly higher */
+}
+
+/* --- 3. SYSTEM WARNING (Intro Div) --- */
+.intro-div {
+    background: linear-gradient(90deg, #1a0000 0%, #0a1526 100%);
+    padding: 20px;
+    border-left: 5px solid #ff4d4d;
+    margin-bottom: 25px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 0 15px rgba(255, 77, 77, 0.1);
+    color: #fff;
+    /* FIX: Forces text to be white */
+}
+
+.intro-div p {
+    color: #fff;
+    /* FIX: Forces paragraph text to be white */
+}
+
+@keyframes alertPulse {
+    0% {
+        box-shadow: 0 0 5px red;
+    }
+
+    50% {
+        box-shadow: 0 0 20px red, 0 0 10px yellow;
+    }
+
+    100% {
+        box-shadow: 0 0 5px red;
+    }
+}
+
+.security-span {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: alertPulse 2s infinite;
+    display: inline-block;
+}
+
+/* --- 4. TACTICAL GEAR LIST (<dl>) --- */
+.gear-list {
+    background: #0a1526;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #1f4063;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.gear-list dt {
+    color: #7fdbff;
+    font-size: 1.1em;
+    margin-top: 15px;
+    border-bottom: 1px solid #1f4063;
+    padding-bottom: 5px;
+}
+
+.gear-list dd {
+    color: #d9e2ec;
+    margin-left: 0;
+    padding-left: 15px;
+    border-left: 2px solid #7fdbff;
+    margin-top: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- 5. THE ASIDE (Sidebar) --- */
+aside {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #c5a059;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 50px;
+    will-change: transform; 
+    z-index: 10;
+}
+
+aside h3,
+aside h4 {
+    color: #e6b85c;
+    border-bottom: 1px dashed #c5a059;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+aside ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.code-keyword {
+    color: cyan;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.code-keyword:hover {
+    text-shadow: 0 0 8px cyan;
+}
+
+/* --- 6. COMPONENTS --- */
+.quote-div {
+    background-color: #1a0000;
+    padding: 20px;
+    border-radius: 8px;
+    border-right: 4px solid #c5a059;
+    margin: 20px 0;
+    color: #fff;
+    /* FIX: Forces text to be white */
+}
+
+.quote-div p {
+    color: #fff;
+    /* FIX: Forces paragraph text to be white */
+}
+
+.map-frame {
+    border: 2px solid #333;
+    border-radius: 8px;
+    width: 100%;
+    height: 250px;
+    transition: border-color 0.3s ease;
+}
+
+.map-frame:hover {
+    border-color: #c5a059;
+}
+
+.entity-log {
+    background: #000;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    color: #00ff00;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+/* --- 7. BLOG FOOTER --- */
+.blog-footer {
+    background: #051a2e;
+    padding: 30px;
+    text-align: center;
+    border-top: 4px solid #c5a059;
+    border-radius: 0 0 8px 8px;
+    color: #8da6bf;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+}
+
+.back-top-btn {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ff4d4d;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-top-btn:hover {
+    background: #ff4d4d;
+    color: #000;
+    box-shadow: 0 0 15px red;
+}

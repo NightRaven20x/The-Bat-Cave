@@ -1,0 +1,144 @@
+/* =========================================
+   DEMO.CSS - Lab 3 Demo Files Styles
+   ========================================= */
+
+/* Containers Demo */
+.demo-block-div {
+    background-color: #051a2e;
+    border: 2px solid #c5a059;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.demo-block-span {
+    background-color: #1a0000;
+    border: 2px solid #ff4d4d;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.highlight-span {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.code-keyword {
+    color: cyan;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Citations Demo */
+blockquote {
+    background-color: #0a1526;
+    border-left: 5px solid #c5a059;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #d9e2ec;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    color: #8da6bf;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: bold;
+}
+
+dfn {
+    font-weight: bold;
+    color: #ffcc00;
+    border-bottom: 1px dashed #ffcc00;
+    cursor: help;
+}
+
+q {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* Entities Demo */
+.entity-list {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.entity-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+.entity-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
+    color: #fff;
+}
+
+.entity-symbol {
+    display: inline-block;
+    width: 40px;
+    color: cyan;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.entity-code {
+    color: #ff9999;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Semantic & Multimedia Demos */
+article {
+    background-color: #0a1526;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #c5a059;
+    margin-bottom: 20px;
+}
+
+aside {
+    background-color: #2e0000;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ff4d4d;
+    margin-bottom: 20px;
+    color: #ffcccc;
+}
+
+.media-section {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+iframe,
+video {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #c5a059;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 10px 0;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    display: block;
+}
